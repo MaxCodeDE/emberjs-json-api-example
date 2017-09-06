@@ -1,0 +1,13 @@
+{{outlet}}
+
+
+
+<center>
+<h1>Todos:</h1>
+{{#each model as |todo|}}
+    <b style="font-size: 25px">Autor:</b> {{todo.author}}
+    <br>
+    <b style="font-size: 25px">Text:</b> <br> {{todo.text}}
+    <hr>
+{{/each}}
+</center>

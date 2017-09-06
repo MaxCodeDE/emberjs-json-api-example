@@ -4,6 +4,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'emberjs-json-api-example',
+    podModulePrefix: '',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -16,6 +17,11 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       }
+    },
+      
+    DS: {
+      host: 'http://localhost:4000',
+      namespace: 'api'
     },
 
     APP: {
@@ -30,6 +36,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.DS.host = 'localhost:4000'; // Localhost
+    ENV.DS.httpEndpoint = 'http://' + ENV.DS.host;
   }
 
   if (environment === 'test') {
