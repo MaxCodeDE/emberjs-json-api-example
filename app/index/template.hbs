@@ -1,13 +1,29 @@
 {{outlet}}
 
 
+<div class="container">
+    <div class="row">
+       <button class="btn btn-lg btn-primary pull-right" onclick={{action (route-action 'createNew')}}>Neues TODO</button>
+        <button class="btn btn-lg btn-danger pull-right" onclick={{action (route-action 'deleteAll')}}>Alle erledigten löschen</button>    
+    </div>
+</div>
 
-<center>
-<h1>Todos:</h1>
-{{#each model as |todo|}}
-    <b style="font-size: 25px">Autor:</b> {{todo.author}}
-    <br>
-    <b style="font-size: 25px">Text:</b> <br> {{todo.text}}
-    <hr>
-{{/each}}
-</center>
+<div class="container">
+    <h1>Todos:</h1>
+    {{#each model as |todo|}}
+        <div class="container todoCard">
+            <div class="row todoHeader">
+                <div class="col-sm-6 todoAuthor">
+                    {{fa-icon 'fa-user' size=2}} {{todo.author}}    
+                </div>
+                <div class="col-sm-6">
+                    <p class="pull-right clickable" onclick={{action (route-action 'toggleDone' todo)}}>{{check-button value=todo.done size=3}}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="todoText">
+                {{todo.text}}
+            </div>
+        </div>
+    {{/each}}
+</div>

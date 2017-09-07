@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <button class="btn btn-lg btn-primary" onclick={{action (route-action 'back')}}>Zurück</button>    
+        <button class="btn btn-lg btn-primary pull-right" onclick={{action (route-action 'save')}}>Anlegen</button>    
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <center><h2>Neues TODO</h2></center>
+    <label>Autor</label>
+    <input value={{model.author}} onchange={{action (mut model.author) value='target.value'}} class="form-control" placeholder="Name" />
+    <br>
+    <label>Text</label>
+    <textarea value={{model.text}} onchange={{action (mut model.text) value='target.value'}} class="form-control" placeholder="Todo" />
+    
+</div>
