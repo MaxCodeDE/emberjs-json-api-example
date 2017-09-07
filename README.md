@@ -2,6 +2,10 @@
 
 This is the client part of a phoenix framework api with json api.
 
+Screenshots:
+<img src="https://github.com/MaxCodeDE/emberjs-json-api-example/blob/master/screenshot_1.PNG" width="980" height="480" />
+<img src="https://github.com/MaxCodeDE/emberjs-json-api-example/blob/master/screenshot_2.PNG" width="980" height="480" />
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
