@@ -3,8 +3,9 @@
 
 <div class="container">
     <div class="row">
-       <button class="btn btn-lg btn-primary pull-right" onclick={{action (route-action 'createNew')}}>Neues TODO</button>
-        <button class="btn btn-lg btn-danger pull-right" onclick={{action (route-action 'deleteAll')}}>Alle erledigten löschen</button>    
+        <button class="btn pull-right" onclick={{action (route-action 'goTo' 'settings')}}>{{fa-icon 'fa-cog' size=2}}</button>
+        <button class="btn btn-lg btn-primary pull-right" onclick={{action (route-action 'goTo' 'new')}}>Neues TODO</button>
+        <button class="btn btn-lg btn-danger pull-right" onclick={{action (route-action 'deleteAll')}}>Alle erledigten löschen</button>        
     </div>
 </div>
 

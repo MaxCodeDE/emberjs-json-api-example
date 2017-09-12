@@ -8,9 +8,6 @@ export default Ember.Route.extend({
     
     
     actions: {
-        createNew() {
-            this.transitionTo('new');
-        },
         deleteAll() {
             this.modelFor('index').forEach((todo) => {
                 if (todo.get('done')) {
@@ -25,6 +22,9 @@ export default Ember.Route.extend({
                 todo.set('done', true);
             }
             todo.save();
+        },
+        goTo(route) {
+            this.transitionTo(route);
         }
     }
     
